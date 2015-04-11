@@ -1,0 +1,5 @@
+<Page>
+	<StackLayout>
+		<Button text="Share an image" tap="shareImage" />
+	</StackLayout>
+</Page>

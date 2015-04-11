@@ -1,0 +1,22 @@
+{
+  "name": "nativescript-social-share",
+  "version": "0.1.0",
+  "description": "A NativeScript module to use the native social sharing widget",
+  "main": "social-share.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjvantoll/nativescript-social-share.git"
+  },
+  "keywords": [
+    "NativeScript"
+  ],
+  "author": "TJ VanToll <tj.vantoll@gmail.com> (http://tjvantoll.com/)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/tjvantoll/nativescript-social-share/blob/master/LICENSE"
+  },
+  "bugs": {
+    "url": "https://github.com/tjvantoll/nativescript-social-share/issues"
+  },
+  "homepage": "https://github.com/tjvantoll/nativescript-social-share"
+}
