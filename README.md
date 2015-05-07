@@ -8,19 +8,20 @@ Run `npm install nativescript-social-share --save` from your project's inner `ap
 
 ```
 .
-├── app
-│   ├── app <------------- run npm install from here
-│   │   ├── app.css
-│   │   ├── app.js
-│   │   ├── bootstrap.js
-│   │   ├── main-page.js
-│   │   ├── main-page.xml
-│   │   ├── node_modules
-│   │   │   └── nativescript-social-share <-- The install will place the module's code here
-│   │   │       └── ...
-│   │   └── package.json <-- The install will register “nativescript-social-share” as a dependency here
-│   └── tns_modules
-│       └── ...
+├── app  <----------------run npm install from here
+│   ├── App_Resources
+│   │   ├── android
+│   │   └── ios
+│   ├── app.css
+│   ├── app.js
+│   ├── main-page.js
+│   ├── main-page.xml
+│   ├── node_modules
+│   │   └── nativescript-social-share <-- The install will place the module's code here
+│   │       └── ...
+│   ├── package.json <-- The install will register “nativescript-social-share as a dependency here
+│   └── tns_modules
+│       └── ...
 └── platforms
     ├── android
     └── ios

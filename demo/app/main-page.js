@@ -2,6 +2,6 @@ var socialShare = require( "./node_modules/nativescript-social-share/social-shar
 var imageSource = require( "image-source" );
 
 exports.shareImage = function() {
-	var image = imageSource.fromFile( "~/app/images/nativescript.jpg" );
+	var image = imageSource.fromFile( "~/images/nativescript.jpg" );
 	socialShare.shareImage(image);
 };
