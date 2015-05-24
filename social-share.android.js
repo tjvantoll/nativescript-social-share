@@ -10,7 +10,7 @@ share.Text('My Text is Cool');
 OR
 var share = require('social-share');
 share.Text('Hello!!');
-share.Image('~/My.jpg');
+share('My name').Image('~/My.jpg');
 */
 
 function share (name) {
@@ -19,7 +19,8 @@ function share (name) {
 }
 
 share.prototype.init = function() {
-	this.intent = new android.content.Intent(android.content.Intent.ACTION_SEND);
+	if(!this.intent)
+		this.intent = new android.content.Intent(android.content.Intent.ACTION_SEND);
 };
 
 share.prototype.__send = function(intent) {
@@ -40,7 +41,8 @@ share.prototype.Image = function(image, subject) {
 	this.__send(this.intent);
 };
 
-share.prototype.Text = function(subject, text) {
+share.prototype.Url =
+share.prototype.Text = function (subject, text) {
 	this.init();
 	this.intent.setType("text/plain");
 	if(typeof subject === 'string')
