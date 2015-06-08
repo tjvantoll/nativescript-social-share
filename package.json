@@ -11,10 +11,7 @@
     "NativeScript"
   ],
   "author": "TJ VanToll <tj.vantoll@gmail.com> (http://tjvantoll.com/)",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/tjvantoll/nativescript-social-share/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/tjvantoll/nativescript-social-share/issues"
   },
