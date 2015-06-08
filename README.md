@@ -71,7 +71,7 @@ socialShare.shareText("I love NativeScript!");
 Like `shareImage()`, you can optionally pass `shareText()` a second argument to configure the subject on Android:
 
 ``` js
-socialShare.shareText(image, "How would you like to share this text?");
+socialShare.shareText("I love NativeScript!", "How would you like to share this text?");
 ```
 
 ## Screenshots
