@@ -1,6 +1,6 @@
 # NativeScript Social Share
 
-A NativeScript module to use the native social sharing widget on Android and iOS. Currently this module only supports image sharing.
+A NativeScript module to use the native social sharing widget on Android and iOS. Currently this module supports image and text sharing.
 
 ## Installation
 
@@ -19,7 +19,7 @@ Run `npm install nativescript-social-share --save` from your project's inner `ap
 │   ├── node_modules
 │   │   └── nativescript-social-share <-- The install will place the module's code here
 │   │       └── ...
-│   ├── package.json <-- The install will register “nativescript-social-share as a dependency here
+│   ├── package.json <-- The install will register “nativescript-social-share” as a dependency here
 │   └── tns_modules
 │       └── ...
 └── platforms
@@ -33,20 +33,45 @@ If npm doesn't end up working for you, you can just copy and paste this repo's s
 
 ## Usage
 
-To use the social share module you must first `require()` it:
+To use the social share module you must first `require()` it. After you `require()` the module you have access to its APIs.
 
 ``` js
-var socialShare = require( "./node_modules/nativescript-social-share/social-share" );
+var socialShare = require("./node_modules/nativescript-social-share/social-share");
 ```
 
-After you have a reference to the module, you can its `shareImage()` method, which expects an [`ImageSource`](http://docs.nativescript.org/ApiReference/image-source/ImageSource.html) object. The code below loads an image from the app and invokes the share widget with it:
+## API
+
+### shareImage(ImageSource image, [optional] String subject)
+
+The `shareImage()` method expects an [`ImageSource`](http://docs.nativescript.org/ApiReference/image-source/ImageSource.html) object. The code below loads an image from the app and invokes the share widget with it:
 
 ``` js
-var socialShare = require( "./node_modules/nativescript-social-share/social-share" );
-var imageSource = require( "image-source" );
+var socialShare = require("./node_modules/nativescript-social-share/social-share");
+var imageSource = require("image-source");
 
-var image = imageSource.fromFile( "~/path/to/myImage.jpg" );
+var image = imageSource.fromFile("~/path/to/myImage.jpg");
 socialShare.shareImage(image);
+```
+
+You can optionally provide a second argument to configure the subject on Android:
+
+``` js
+socialShare.shareImage(image, "How would you like to share this image?");
+```
+
+### shareText(String text, [optional] String subject)
+
+The `shareText()` method expects a simple string:
+
+``` js
+var socialShare = require("./node_modules/nativescript-social-share/social-share");
+socialShare.shareText("I love NativeScript!");
+```
+
+Like `shareImage()`, you can optionally pass `shareText()` a second argument to configure the subject on Android:
+
+``` js
+socialShare.shareText(image, "How would you like to share this text?");
 ```
 
 ## Screenshots
