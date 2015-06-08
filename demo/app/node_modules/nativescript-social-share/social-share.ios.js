@@ -1,8 +1,15 @@
+function share(thingToShare) {
+	var activityController = UIActivityViewController.alloc()
+		.initWithActivityItemsApplicationActivities([thingToShare], null);
+	UIApplication.sharedApplication().keyWindow.rootViewController
+		.presentViewControllerAnimatedCompletion(activityController, true, null);
+}
+
 module.exports = {
 	shareImage: function(image) {
-		var activityController = UIActivityViewController.alloc()
-			.initWithActivityItemsApplicationActivities([image.ios], null);
-		UIApplication.sharedApplication().keyWindow.rootViewController
-			.presentViewControllerAnimatedCompletion(activityController, true, null);
+		share(image);
+	},
+	shareText: function(text) {
+		share(text);
 	}
 };

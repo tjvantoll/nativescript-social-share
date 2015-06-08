@@ -2,6 +2,6 @@
   "name": "nativescript-sample-social-share",
   "main": "app.js",
   "dependencies": {
-    "nativescript-social-share": "^0.1.0"
+    "nativescript-social-share": "^1.0.0"
   }
 }
