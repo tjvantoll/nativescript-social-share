@@ -1,4 +1,4 @@
-var socialShare = require("./node_modules/nativescript-social-share/social-share");
+var socialShare = require("nativescript-social-share");
 var imageSource = require("image-source");
 
 exports.shareImage = function() {

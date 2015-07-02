@@ -1,0 +1,14 @@
+{
+  "nativescript": {
+    "id": "com.tjvantoll.socialsharedemo",
+    "tns-ios": {
+      "version": "1.1.2"
+    },
+    "tns-android": {
+      "version": "1.1.0"
+    }
+  },
+  "dependencies": {
+    "nativescript-social-share": "^1.1.0"
+  }
+}
