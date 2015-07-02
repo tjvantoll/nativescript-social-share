@@ -7,6 +7,8 @@ A NativeScript plugin to use the native social sharing widget on Android and iOS
 
 ## Installation
 
+Run the following command from the root of your project:
+
 ```
 $ tns plugin add nativescript-social-share
 ```
