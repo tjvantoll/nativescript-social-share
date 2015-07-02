@@ -2,6 +2,9 @@
 
 A NativeScript plugin to use the native social sharing widget on Android and iOS. Currently this module supports image and text sharing.
 
+![](screenshots/ios.png)
+![](screenshots/android.png)
+
 ## Installation
 
 ```
@@ -53,10 +56,3 @@ Like `shareImage()`, you can optionally pass `shareText()` a second argument to 
 ``` js
 socialShare.shareText("I love NativeScript!", "How would you like to share this text?");
 ```
-
-## Screenshots
-
-<div>
-	<img alt="" src="screenshots/ios.png" style="max-width: 50%; height: 500px; float: left;">
-	<img alt="" src="screenshots/android.png" style="max-width: 50%; height: 500px; float: left;">
-</div>
