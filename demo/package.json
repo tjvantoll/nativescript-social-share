@@ -9,7 +9,7 @@
 		}
 	},
 	"dependencies": {
-		"nativescript-social-share": "^1.1.0",
+		"nativescript-social-share": "^1.1.1",
 		"tns-core-modules": "1.4.0"
 	}
 }
