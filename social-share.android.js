@@ -2,7 +2,6 @@ var application = require("application");
 var context = application.android.context;
 var numberOfImagesCreated = 0;
 
-
 function getIntent(type) {
 	var intent = new android.content.Intent(android.content.Intent.ACTION_SEND);
 	intent.setType(type);
@@ -24,10 +23,18 @@ module.exports = {
 
 		var stream = new java.io.ByteArrayOutputStream();
 		image.android.compress(android.graphics.Bitmap.CompressFormat.JPEG, 100, stream);
-		var path = android.provider.MediaStore.Images.Media.insertImage(
-			context.getContentResolver(), image.android, "TempFile" + numberOfImagesCreated, null);
+
+		var imageFileName = "socialsharing" + numberOfImagesCreated + ".jpg";
+		var newFile = new java.io.File(context.getExternalFilesDir(null), imageFileName);
+
+		var fos = new java.io.FileOutputStream(newFile);
+		fos.write(stream.toByteArray());
+
+		fos.flush();
+		fos.close();
+
 		intent.putExtra(android.content.Intent.EXTRA_STREAM,
-			android.net.Uri.parse(path));
+			android.net.Uri.fromFile(newFile));
 
 		share(intent, subject);
 	},
