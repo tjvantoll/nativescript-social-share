@@ -1,5 +1,5 @@
 var application = require("application");
-var context = application.android.context;
+var context;
 var numberOfImagesCreated = 0;
 
 function getIntent(type) {
@@ -8,6 +8,7 @@ function getIntent(type) {
 	return intent;
 }
 function share(intent, subject) {
+	context = application.android.context;
 	subject = subject || "How would you like to share this?";
 
 	var shareIntent = android.content.Intent.createChooser(intent, subject);
