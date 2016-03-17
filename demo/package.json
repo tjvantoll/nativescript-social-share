@@ -2,14 +2,14 @@
 	"nativescript": {
 		"id": "com.tjvantoll.demo",
 		"tns-ios": {
-			"version": "1.4.0"
+			"version": "1.7.0"
 		},
 		"tns-android": {
-			"version": "1.4.0"
+			"version": "1.7.0"
 		}
 	},
 	"dependencies": {
-		"nativescript-social-share": "^1.1.1",
-		"tns-core-modules": "1.4.0"
+		"nativescript-social-share": "file:../../nativescript-social-share",
+		"tns-core-modules": "1.7.0"
 	}
 }
