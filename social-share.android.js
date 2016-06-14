@@ -19,6 +19,8 @@ function share(intent, subject) {
 module.exports = {
 	shareImage: function(image, subject) {
 		numberOfImagesCreated ++;
+		
+		context = application.android.context;
 
 		var intent = getIntent("image/jpeg");
 
