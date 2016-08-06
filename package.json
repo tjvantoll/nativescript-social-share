@@ -3,6 +3,7 @@
 	"version": "1.2.0",
 	"description": "A NativeScript module to use the native social sharing widget",
 	"main": "social-share.js",
+	"typings": "index.d.ts",
 	"nativescript": {
 		"platforms": {
 			"ios": "1.4.0",
