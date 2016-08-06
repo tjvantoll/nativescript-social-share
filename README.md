@@ -20,8 +20,14 @@ This command automatically installs the necessary files, as well as stores nativ
 
 To use the social share module you must first `require()` it. After you `require()` the module you have access to its APIs.
 
+### JavaScript
 ``` js
-var socialShare = require("nativescript-social-share");
+var SocialShare = require("nativescript-social-share");
+```
+
+### TypeScript
+``` TS
+import * as SocialShare from 'nativescript-social-share';
 ```
 
 ## API
@@ -31,11 +37,11 @@ var socialShare = require("nativescript-social-share");
 The `shareImage()` method expects an [`ImageSource`](http://docs.nativescript.org/ApiReference/image-source/ImageSource.html) object. The code below loads an image from the app and invokes the share widget with it:
 
 ``` js
-var socialShare = require("nativescript-social-share");
+var SocialShare = require("nativescript-social-share");
 var imageSource = require("image-source");
 
 var image = imageSource.fromFile("~/path/to/myImage.jpg");
-socialShare.shareImage(image);
+SocialShare.shareImage(image);
 ```
 
 You can optionally provide a second argument to configure the subject on Android:
@@ -49,12 +55,12 @@ socialShare.shareImage(image, "How would you like to share this image?");
 The `shareText()` method expects a simple string:
 
 ``` js
-var socialShare = require("nativescript-social-share");
-socialShare.shareText("I love NativeScript!");
+var SocialShare = require("nativescript-social-share");
+SocialShare.shareText("I love NativeScript!");
 ```
 
 Like `shareImage()`, you can optionally pass `shareText()` a second argument to configure the subject on Android:
 
 ``` js
-socialShare.shareText("I love NativeScript!", "How would you like to share this text?");
+SocialShare.shareText("I love NativeScript!", "How would you like to share this text?");
 ```
