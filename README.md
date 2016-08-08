@@ -35,14 +35,14 @@ import * as SocialShare from "nativescript-social-share";
 The `shareImage()` method expects an [`ImageSource`](http://docs.nativescript.org/ApiReference/image-source/ImageSource.html) object. The code below loads an image from the app and invokes the share widget with it:
 
 ``` JavaScript
-// JavaScript
+// ------------ JavaScript ------------------
 var SocialShare = require("nativescript-social-share");
 var imageSourceModule = require("image-source");
 
 var image = imageSourceModule.fromFile("~/path/to/myImage.jpg");
 SocialShare.shareImage(image);
 
-// TypeScript
+// ------------- TypeScript ------------------
 import * as SocialShare from "nativescript-social-share";
 import { ImageSource } from "image-source";
 
