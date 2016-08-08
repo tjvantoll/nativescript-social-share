@@ -21,10 +21,10 @@ This command automatically installs the necessary files, as well as stores nativ
 To use the social share module you must first `require()` it. After you `require()` the module you have access to its APIs.
 
 ``` JavaScript
-// JavaScript
+// ------------ JavaScript ------------------
 var SocialShare = require("nativescript-social-share");
 
-// TypeScript
+// ------------- TypeScript ------------------
 import * as SocialShare from "nativescript-social-share";
 ```
 
