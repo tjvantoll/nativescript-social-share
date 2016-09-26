@@ -2,15 +2,15 @@
 	"nativescript": {
 		"id": "com.tjvantoll.socialsharedemo",
 		"tns-ios": {
-			"version": "2.0.1"
+			"version": "2.3.0"
 		},
 		"tns-android": {
-			"version": "2.0.0"
+			"version": "2.3.0"
 		}
 	},
 	"dependencies": {
 		"nativescript-social-share": "file:../../nativescript-social-share",
-		"tns-core-modules": "2.0.1"
+		"tns-core-modules": "2.3.0"
 	},
 	"devDependencies": {
 		"babel-traverse": "6.9.0",

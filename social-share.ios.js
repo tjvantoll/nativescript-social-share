@@ -1,4 +1,5 @@
 var frameModule = require("ui/frame");
+var utilsModule = require("utils/utils");
 
 function share(thingToShare, index) {
 	var activityController = UIActivityViewController.alloc()
@@ -13,7 +14,10 @@ function share(thingToShare, index) {
 			presentViewController.sourceView = page.ios.view;
 		}
 	}
-	UIApplication.sharedApplication().keyWindow.rootViewController
+
+	utilsModule.ios.getter(UIApplication, UIApplication.sharedApplication)
+		.keyWindow
+		.rootViewController
 		.presentViewControllerAnimatedCompletion(activityController, true, null);
 }
 
