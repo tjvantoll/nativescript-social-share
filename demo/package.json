@@ -1,22 +1,23 @@
 {
-	"nativescript": {
-		"id": "com.tjvantoll.socialsharedemo",
-		"tns-ios": {
-			"version": "2.3.0"
-		},
-		"tns-android": {
-			"version": "2.3.0"
-		}
-	},
-	"dependencies": {
-		"nativescript-social-share": "file:../../nativescript-social-share",
-		"tns-core-modules": "2.3.0"
-	},
-	"devDependencies": {
-		"babel-traverse": "6.9.0",
-		"babel-types": "6.10.0",
-		"babylon": "6.8.1",
-		"filewalker": "0.1.2",
-		"lazy": "1.0.11"
-	}
+  "nativescript": {
+    "id": "org.nativescript.socialsharedemo",
+    "tns-ios": {
+      "version": "2.4.0"
+    },
+    "tns-android": {
+      "version": "2.4.1"
+    }
+  },
+  "dependencies": {
+    "nativescript-social-share": "file:../../nativescript-social-share",
+    "nativescript-theme-core": "^1.0.2",
+    "tns-core-modules": "2.4.4"
+  },
+  "devDependencies": {
+    "babel-traverse": "6.9.0",
+    "babel-types": "6.10.0",
+    "babylon": "6.8.1",
+    "filewalker": "0.1.2",
+    "lazy": "1.0.11"
+  }
 }

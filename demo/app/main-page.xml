@@ -1,6 +1,7 @@
-<Page>
+<Page class="page">
+	<ActionBar class="action-bar" title="Social Share Demo"></ActionBar>
 	<StackLayout>
-		<Button text="Share an image" tap="shareImage" />
-		<Button text="Share text" tap="shareText" />
+		<Button class="btn-outline btn-primary m-20 p-10" text="Share an image" tap="shareImage"></Button>
+		<Button class="btn-outline btn-primary m-20 p-10" text="Share text" tap="shareText"></Button>
 	</StackLayout>
 </Page>
