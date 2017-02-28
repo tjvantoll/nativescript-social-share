@@ -69,3 +69,11 @@ Like `shareImage()`, you can optionally pass `shareText()` a second argument to 
 ``` js
 SocialShare.shareText("I love NativeScript!", "How would you like to share this text?");
 ```
+
+## Tutorials
+
+Looking for some extra help getting social sharing working in your mobile application?  Check out these resources:
+
+[Social Media Sharing in a Vanilla NativeScript Application](https://www.thepolyglotdeveloper.com/2016/03/implement-social-media-sharing-nativescript-app/)
+
+[Social Media Sharing in a NativeScript with Angular Application](https://www.thepolyglotdeveloper.com/2017/02/social-media-sharing-prompts-nativescript-angular-application/)
