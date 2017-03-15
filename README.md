@@ -69,3 +69,17 @@ Like `shareImage()`, you can optionally pass `shareText()` a second argument to 
 ``` js
 SocialShare.shareText("I love NativeScript!", "How would you like to share this text?");
 ```
+
+### shareUrl(String url, String text, [optional] String subject)
+
+The `shareUrl()` method excepts a url and a string.
+
+``` js
+SocialShare.shareUrl("https://www.nativescript.org/", "Home of NativeScript");
+```
+
+You can optionally pass `shareUrl()` a second argument to configure the subject on Android:
+
+``` js
+SocialShare.shareUrl("https://www.nativescript.org/", "Home of NativeScript", "How would you like to share this url?");
+```

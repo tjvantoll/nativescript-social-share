@@ -46,5 +46,13 @@ module.exports = {
 
 		intent.putExtra(android.content.Intent.EXTRA_TEXT, text);
 		share(intent, subject);
+	},
+	shareUrl: function(url, text, subject) {
+		var intent = getIntent("text/plain");
+
+		intent.putExtra(android.content.Intent.EXTRA_TEXT, url);
+		intent.putExtra(android.content.Intent.EXTRA_SUBJECT, text);
+
+		share(intent, subject);
 	}
 };

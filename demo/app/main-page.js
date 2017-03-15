@@ -8,3 +8,6 @@ exports.shareImage = function() {
 exports.shareText = function() {
 	socialShare.shareText("I love NativeScript!");
 };
+exports.shareUrl = function() {
+	socialShare.shareUrl("https://www.nativescript.org/", "Home of NativeScript", "How would you like to share this url?");
+};
