@@ -1,9 +1,9 @@
 var frameModule = require("ui/frame");
 var utilsModule = require("utils/utils");
 
-function share(thingToShare, index) {
+function share(thingsToShare, index) {
 	var activityController = UIActivityViewController.alloc()
-		.initWithActivityItemsApplicationActivities([thingToShare], null);
+		.initWithActivityItemsApplicationActivities(thingsToShare, null);
 	var presentViewController = activityController.popoverPresentationController;
 	if (presentViewController) {
 		var page = frameModule.topmost().currentPage;
@@ -23,9 +23,12 @@ function share(thingToShare, index) {
 
 module.exports = {
 	shareImage: function(image) {
-		share(image);
+		share([image]);
 	},
 	shareText: function(text) {
-		share(text);
+		share([text]);
+	},
+	shareUrl: function(url, text) {
+		share([NSURL.URLWithString(url), text]);
 	}
 };
