@@ -1,17 +1,17 @@
 {
   "nativescript": {
     "id": "org.nativescript.socialsharedemo",
-    "tns-ios": {
-      "version": "2.4.0"
-    },
     "tns-android": {
-      "version": "2.4.1"
+      "version": "3.0.0-rc.1"
+    },
+    "tns-ios": {
+      "version": "3.0.0-rc.2"
     }
   },
   "dependencies": {
     "nativescript-social-share": "file:../../nativescript-social-share",
     "nativescript-theme-core": "^1.0.2",
-    "tns-core-modules": "2.4.4"
+    "tns-core-modules": "^3.0.0-rc.2"
   },
   "devDependencies": {
     "babel-traverse": "6.9.0",
