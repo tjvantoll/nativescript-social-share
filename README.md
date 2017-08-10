@@ -82,11 +82,11 @@ You can optionally pass `shareUrl()` a second argument to configure the subject 
 
 ``` js
 SocialShare.shareUrl("https://www.nativescript.org/", "Home of NativeScript", "How would you like to share this url?");
+```
 
 ## Tutorials
 
-Looking for some extra help getting social sharing working in your mobile application?  Check out these resources:
+Looking for some extra help getting social sharing working in your mobile application? Check out these resources:
 
-[Social Media Sharing in a Vanilla NativeScript Application](https://www.thepolyglotdeveloper.com/2016/03/implement-social-media-sharing-nativescript-app/)
-
-[Social Media Sharing in a NativeScript with Angular Application](https://www.thepolyglotdeveloper.com/2017/02/social-media-sharing-prompts-nativescript-angular-application/)
+* [Social Media Sharing in a Vanilla NativeScript Application](https://www.thepolyglotdeveloper.com/2016/03/implement-social-media-sharing-nativescript-app/)
+* [Social Media Sharing in a NativeScript with Angular Application](https://www.thepolyglotdeveloper.com/2017/02/social-media-sharing-prompts-nativescript-angular-application/)
