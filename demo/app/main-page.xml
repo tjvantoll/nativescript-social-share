@@ -3,6 +3,6 @@
 	<StackLayout>
 		<Button class="btn-outline btn-primary m-20 p-10" text="Share an image" tap="shareImage"></Button>
 		<Button class="btn-outline btn-primary m-20 p-10" text="Share text" tap="shareText"></Button>
-		<Button class="btn-outline btn-primary m-20 p-10" text="Share url" tap="shareUrl"></Button>
+		<Button class="btn-outline btn-primary m-20 p-10" text="Share URL" tap="shareUrl"></Button>
 	</StackLayout>
 </Page>
