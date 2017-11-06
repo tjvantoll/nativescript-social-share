@@ -18,6 +18,13 @@
 		"NativeScript"
 	],
 	"author": "TJ VanToll <tj.vantoll@gmail.com> (http://tjvantoll.com/)",
+	"contributors": [
+		{
+			"name": "Eddy Verbruggen",
+			"email": "eddyverbruggen@gmail.com",
+			"url": "https://github.com/EddyVerbruggen"
+		}
+	],
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/tjvantoll/nativescript-social-share/issues"

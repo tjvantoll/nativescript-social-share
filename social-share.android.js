@@ -1,4 +1,5 @@
 var application = require("application");
+var platform = require("platform");
 var context;
 var numberOfImagesCreated = 0;
 
@@ -36,8 +37,14 @@ module.exports = {
 		fos.flush();
 		fos.close();
 
-		intent.putExtra(android.content.Intent.EXTRA_STREAM,
-			android.net.Uri.fromFile(newFile));
+    var shareableFileUri;
+    var sdkVersionInt = parseInt(platform.device.sdkVersion);
+    if (sdkVersionInt >= 21) {
+      shareableFileUri = android.support.v4.content.FileProvider.getUriForFile(context, application.android.nativeApp.getPackageName() + ".provider", newFile);
+    } else {
+      shareableFileUri = android.net.Uri.fromFile(newFile);
+    }
+    intent.putExtra(android.content.Intent.EXTRA_STREAM, shareableFileUri);
 
 		share(intent, subject);
 	},
