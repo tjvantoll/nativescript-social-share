@@ -23,12 +23,12 @@ function share(thingsToShare, index) {
 
 module.exports = {
 	shareImage: function(image) {
-		share([image]);
+		share(NSArray.arrayWithObject(image));
 	},
 	shareText: function(text) {
-		share([text]);
+		share(NSArray.arrayWithObject(text));
 	},
 	shareUrl: function(url, text) {
-		share([NSURL.URLWithString(url), text]);
+		share(NSArray.arrayWithObject(NSURL.URLWithString(url)));
 	}
 };
