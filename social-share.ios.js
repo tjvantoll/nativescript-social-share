@@ -29,6 +29,9 @@ module.exports = {
 		share(NSArray.arrayWithObject(text));
 	},
 	shareUrl: function(url, text) {
-		share(NSArray.arrayWithObject(NSURL.URLWithString(url)));
+		share(NSArray.arrayWithArray([
+			NSURL.URLWithString(url),
+			text
+		]));
 	}
 };
