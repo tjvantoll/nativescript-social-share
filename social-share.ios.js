@@ -15,9 +15,7 @@ function share(thingsToShare, index) {
 		}
 	}
 
-	utilsModule.ios.getter(UIApplication, UIApplication.sharedApplication)
-		.keyWindow
-		.rootViewController
+	frameModule.topmost().ios.controller
 		.presentViewControllerAnimatedCompletion(activityController, true, null);
 }
 
