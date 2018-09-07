@@ -1,6 +1,6 @@
 {
     "name": "nativescript-social-share",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "A NativeScript module to use the native social sharing widget",
     "main": "social-share",
     "typings": "index.d.ts",
