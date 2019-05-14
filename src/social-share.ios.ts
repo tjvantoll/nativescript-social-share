@@ -1,12 +1,12 @@
 import { topmost } from "tns-core-modules/ui/frame";
 
 function share(thingsToShare) {
-  var activityController = UIActivityViewController.alloc()
-    .initWithActivityItemsApplicationActivities(thingsToShare, null);
+  const activityController = UIActivityViewController.alloc()
+      .initWithActivityItemsApplicationActivities(thingsToShare, null);
 
-  var presentViewController = activityController.popoverPresentationController;
+  const presentViewController = activityController.popoverPresentationController;
   if (presentViewController) {
-    var page = topmost().currentPage;
+    const page = topmost().currentPage;
     if (page && page.ios.navigationItem.rightBarButtonItems &&
       page.ios.navigationItem.rightBarButtonItems.count > 0) {
       presentViewController.barButtonItem = page.ios.navigationItem.rightBarButtonItems[0];

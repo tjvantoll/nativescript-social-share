@@ -6,6 +6,7 @@
 *.js.map
 *.log
 src/*.d.ts
+*.aar
 !src/index.d.ts
 !src/references.d.ts
 !src/scripts/*.js

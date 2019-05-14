@@ -1,6 +1,6 @@
 {
     "name": "nativescript-social-share",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "A NativeScript module to use the native social sharing widget",
     "main": "social-share",
     "typings": "index.d.ts",
@@ -17,14 +17,14 @@
         "postclone": "npm i && node scripts/postclone.js && cd ../demo && npm i && npx rimraf -- package-lock.json && cd ../src",
         "test.android": "npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
         "test.ios": "npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
-        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\"",
+        "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude '**/node_modules/**' --exclude '**/platforms/**'",
         "plugin.tscwatch": "npm run tsc -- -w",
         "demo.ios": "npm run tsc && cd ../demo && tns run ios --syncAllFiles --emulator",
         "demo.android": "npm run tsc && cd ../demo && tns run android --syncAllFiles --emulator",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-social-share && tns plugin add ../src",
         "clean": "npm run demo.reset && npx rimraf -- node_modules package-lock.json && npm i",
-        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'",
+        "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**' --exclude '**/platforms/**'",
         "prepack": "npm run build.native"
     },
     "keywords": [
@@ -51,8 +51,8 @@
     "homepage": "https://github.com/tjvantoll/nativescript-social-share",
     "readmeFilename": "README.md",
     "devDependencies": {
-        "tns-core-modules": "^4.2.0",
-        "tns-platform-declarations": "^4.2.0",
+        "tns-core-modules": "~5.3.0",
+        "tns-platform-declarations": "^5.3.0",
         "typescript": "~2.8.2",
         "prompt": "^1.0.0",
         "rimraf": "^2.6.2",
