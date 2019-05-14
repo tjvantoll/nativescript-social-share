@@ -3,6 +3,8 @@ import * as platform from "tns-core-modules/platform";
 
 var context;
 var numberOfImagesCreated = 0;
+declare var global: any;
+const FileProviderPackageName = useAndroidX() ? global.androidx.core.content : android.support.v4.content;
 
 function getIntent(type) {
   var intent = new android.content.Intent(android.content.Intent.ACTION_SEND);
@@ -16,6 +18,9 @@ function share(intent, subject) {
   var shareIntent = android.content.Intent.createChooser(intent, subject);
   shareIntent.setFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK);
   context.startActivity(shareIntent);
+}
+function useAndroidX () {
+  return global.androidx && global.androidx.appcompat;
 }
 
 export function shareImage(image, subject) {
@@ -40,7 +45,7 @@ export function shareImage(image, subject) {
   var shareableFileUri;
   var sdkVersionInt = parseInt(platform.device.sdkVersion);
   if (sdkVersionInt >= 21) {
-    shareableFileUri = android.support.v4.content.FileProvider.getUriForFile(context, application.android.nativeApp.getPackageName() + ".provider", newFile);
+    shareableFileUri = FileProviderPackageName.FileProvider.getUriForFile(context, application.android.nativeApp.getPackageName() + ".provider", newFile);
   } else {
     shareableFileUri = android.net.Uri.fromFile(newFile);
   }
