@@ -15,7 +15,7 @@ function share(thingsToShare) {
     }
   }
 
-  topmost().ios.controller
+  topmost().ios.controller.visibleViewController
     .presentViewControllerAnimatedCompletion(activityController, true, null);
 }
 
