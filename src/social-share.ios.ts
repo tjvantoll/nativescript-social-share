@@ -1,4 +1,5 @@
-import { topmost } from "tns-core-modules/ui/frame";
+import { ios } from "tns-core-modules/utils/utils";
+import { Frame } from "tns-core-modules/ui";
 
 function share(thingsToShare) {
   const activityController = UIActivityViewController.alloc()
@@ -6,7 +7,7 @@ function share(thingsToShare) {
 
   const presentViewController = activityController.popoverPresentationController;
   if (presentViewController) {
-    const page = topmost().currentPage;
+    const page = Frame.topmost().currentPage;
     if (page && page.ios.navigationItem.rightBarButtonItems &&
       page.ios.navigationItem.rightBarButtonItems.count > 0) {
       presentViewController.barButtonItem = page.ios.navigationItem.rightBarButtonItems[0];
@@ -15,7 +16,11 @@ function share(thingsToShare) {
     }
   }
 
-  topmost().ios.controller.visibleViewController
+  const app = UIApplication.sharedApplication;
+  const window = app.keyWindow || (app.windows && app.windows.count > 0 && app.windows[0]);
+  const rootController = window.rootViewController;
+
+  ios.getVisibleViewController(rootController)
     .presentViewControllerAnimatedCompletion(activityController, true, null);
 }
 

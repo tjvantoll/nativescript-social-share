@@ -4,7 +4,7 @@ import * as platform from "tns-core-modules/platform";
 let context;
 let numberOfImagesCreated = 0;
 declare var global: any;
-const FileProviderPackageName = useAndroidX() ? global.androidx.core.content : android.support.v4.content;
+const FileProviderPackageName = useAndroidX() ? global.androidx.core.content : (<any>android).support.v4.content;
 
 function getIntent(type) {
   const intent = new android.content.Intent(android.content.Intent.ACTION_SEND);

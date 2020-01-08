@@ -1,8 +1,8 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" class="page">
   <ActionBar title="Social Share"></ActionBar>
   <StackLayout>
-    <Button class="btn-outline btn-primary m-20 p-10" text="Share an image" tap="shareImage"></Button>
-    <Button class="btn-outline btn-primary m-20 p-10" text="Share text" tap="shareText"></Button>
-    <Button class="btn-outline btn-primary m-20 p-10" text="Share URL" tap="shareUrl"></Button>
+    <Button class="btn-outline btn-primary m-20 p-10" text="Share an image" tap="doShareImage"></Button>
+    <Button class="btn-outline btn-primary m-20 p-10" text="Share text" tap="doShareText"></Button>
+    <Button class="btn-outline btn-primary m-20 p-10" text="Share URL" tap="doShareUrl"></Button>
   </StackLayout>
 </Page>

@@ -1,13 +1,16 @@
 import { shareImage, shareText, shareUrl } from "nativescript-social-share";
 import { fromFile } from "tns-core-modules/image-source";
 
-exports.shareImage = function() {
+export const doShareImage = () => {
+  console.log("sjer");
   const image = fromFile("~/images/nativescript.jpg");
   shareImage(image);
 };
-exports.shareText = function() {
+
+export const doShareText = () => {
   shareText("I love NativeScript!");
 };
-exports.shareUrl = function() {
+
+export const doShareUrl = () => {
   shareUrl("https://www.nativescript.org/", "Home of NativeScript", "How would you like to share this url?");
 };
