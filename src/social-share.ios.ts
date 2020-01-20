@@ -20,7 +20,7 @@ function share(thingsToShare) {
   const window = app.keyWindow || (app.windows && app.windows.count > 0 && app.windows[0]);
   const rootController = window.rootViewController;
 
-  ios.getVisibleViewController(rootController)
+  (!rootController.presentedViewController ? rootController : ios.getVisibleViewController(rootController)) 
     .presentViewControllerAnimatedCompletion(activityController, true, null);
 }
 
