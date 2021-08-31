@@ -1,9 +1,9 @@
 import { shareImage, shareText, shareUrl } from "nativescript-social-share";
-import { fromFile } from "tns-core-modules/image-source";
+import { ImageSource } from '@nativescript/core/image-source';
 
 export const doShareImage = () => {
   console.log("sjer");
-  const image = fromFile("~/images/nativescript.jpg");
+  const image = ImageSource.fromFileSync("~/images/nativescript.jpg");
   shareImage(image);
 };
 

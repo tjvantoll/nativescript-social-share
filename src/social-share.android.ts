@@ -1,5 +1,5 @@
-import * as application from "tns-core-modules/application";
-import * as platform from "tns-core-modules/platform";
+import { Application } from "@nativescript/core";
+import { Device } from "@nativescript/core";
 
 let context;
 let numberOfImagesCreated = 0;
@@ -12,7 +12,7 @@ function getIntent(type) {
   return intent;
 }
 function share(intent, subject) {
-  context = application.android.context;
+  context = Application.android.context;
   subject = subject || "How would you like to share this?";
 
   const shareIntent = android.content.Intent.createChooser(intent, subject);
@@ -26,7 +26,7 @@ function useAndroidX () {
 export function shareImage(image, subject) {
   numberOfImagesCreated ++;
 
-  context = application.android.context;
+  context = Application.android.context;
 
   const intent = getIntent("image/jpeg");
 
@@ -43,9 +43,9 @@ export function shareImage(image, subject) {
   fos.close();
 
   let shareableFileUri;
-  const sdkVersionInt = parseInt(platform.device.sdkVersion);
+  const sdkVersionInt = parseInt(Device.sdkVersion);
   if (sdkVersionInt >= 21) {
-    shareableFileUri = FileProviderPackageName.FileProvider.getUriForFile(context, application.android.nativeApp.getPackageName() + ".provider", newFile);
+    shareableFileUri = FileProviderPackageName.FileProvider.getUriForFile(context, Application.android.nativeApp.getPackageName() + ".provider", newFile);
   } else {
     shareableFileUri = android.net.Uri.fromFile(newFile);
   }
